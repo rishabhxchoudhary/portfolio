@@ -12,13 +12,28 @@
 <script src="https://kit.fontawesome.com/b2255bbbaf.js" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/b2255bbbaf.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class="loader">
-        <div class=""></div>
-    </div>
 
+<style>
+    html,body{
+        height: 100vh;
+        overflow: hidden;
+    }
+    .main{
+        height: 100vh;
+        overflow: scroll;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+    }
+    .child{
+        scroll-snap-align: start;
+    }
+</style>
+<body>
+    <!-- <div class="loader">
+        <div class=""></div>
+    </div> -->
     <div class="main">   
-        <div class="hero">
+        <div class="child hero">
             <div class="nav">
                 <div class="line"><hr></div>
                 <div class="nav-items">
@@ -43,19 +58,17 @@
                 <div class="line"><hr></div>
             </div>
         </div>
-
-        <!-- About Section -->
-        <div class="" id="about"></div>
-        <div class="nav">
-                <div class="line"><hr></div>
-                <div class="nav-items">
-                    <!-- <div class="item">About Me</div>
-                    <div class="item">Education</div>
-                    <div class="item">Work</div>
-                    <div class="item">Contacts</div> -->
-                </div>
-        </div>
-        <div class="about" >
+        <div class="child about" >
+            <div class="" id="about"></div>
+            <div class="nav">
+                    <div class="line"><hr></div>
+                    <div class="nav-items">
+                        <!-- <div class="item">About Me</div>
+                        <div class="item">Education</div>
+                        <div class="item">Work</div>
+                        <div class="item">Contacts</div> -->
+                    </div>
+            </div>
             <div class="content">
                 <div class="image"><img src="./images/Me.png" alt=""></div>
                 <div class="text">
@@ -78,10 +91,9 @@
                 <div class="line"><hr></div>
             </div>
         </div>
-
-        <div class="" id="education"></div>
-        <!-- Education -->
-        <div class="nav">
+        <div class="child education">
+            <div class="" id="education"></div>
+            <div class="nav">
                 <div class="line"><hr></div>
                 <div class="nav-items">
                     <!-- <div class="item">About Me</div>
@@ -89,8 +101,7 @@
                     <div class="item">Work</div>
                     <div class="item">Contacts</div> -->
                 </div>
-        </div>
-        <div class="education">
+            </div>
             <div class="content">
                 <div class="text">
                     <div class="title"><span>E</span>ducation</div>
@@ -127,8 +138,9 @@
                 <div class="line"><hr></div>
             </div>
         </div>
-        <!-- Education -->
-        <div class="nav">
+        <div class="child thanks">
+            <div class="" id="contacts"></div>
+            <div class="nav">
                 <div class="line"><hr></div>
                 <div class="nav-items">
                     <!-- <div class="item">About Me</div>
@@ -136,11 +148,7 @@
                     <div class="item">Work</div>
                     <div class="item">Contacts</div> -->
                 </div>
-        </div>
-
-        <!-- Thanks -->
-        <div class="" id="contacts"></div>
-        <div class="thanks">
+            </div>
             <div class="content">
                 <div class="title"><p>Thank <span>You</span></p></div>
                 <div class="paragraph">Let's work together</div>
