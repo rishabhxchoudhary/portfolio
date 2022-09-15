@@ -4,5 +4,5 @@ const loader = document.querySelector('.loader');
 window.onload = function(){
     loader.style.animation="";
     loader.style.display="none";
-    main.style.display="initial";
-    };
+    // main.style.display="initial";
+};
