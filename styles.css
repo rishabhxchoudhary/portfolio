@@ -29,8 +29,13 @@ body{
     justify-content: space-between;
     /* border: 2px solid white; */
 }
+
 a{
     color: white;
+    text-decoration: none;
+}
+
+a:active{
     text-decoration: none;
 }
 
@@ -64,6 +69,7 @@ a{
 
 .hero{
     height: 100vh;
+    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -83,6 +89,7 @@ a{
 }
 
 .hero .content p{
+    width: 900px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid white; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -173,11 +180,12 @@ a{
     height: 450px;
     width: 450px;
     border-radius: 50%;
-    transform: translateX(125px);
+    transform: translateX(100px);
 }
 
 .about .content .text{
     width: 50%;
+    /* margin-left: 40px; */
     /* border: 1px solid white; */
 }
 
@@ -389,3 +397,263 @@ span{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+/* Responsiveness */
+@media only screen and (max-width: 500px){
+
+    /* Main Page */
+    .nav {
+        margin-top: 60px;
+        height: 10vh;
+        width: 100%;    
+        display: flex;
+        justify-content: space-between;
+        /* border: 2px solid white; */
+    }
+
+    .nav .line{
+        margin-top: 10px;
+        width: 30%;
+        /* border: 2px solid white; */
+    }
+
+    .nav .nav-items{
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .hero .content{
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        font-size: 4rem;
+        font-weight: bold;
+        overflow-wrap: break-word;
+        /* transform: translateY(-40px); */
+        /* border: 2px solid white; */
+    }
+    .hero .content p{
+        width: 275px;
+        /* overflow: auto; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        /* border: 1px solid yellow; */
+        animation: 
+            typing 2s steps(3),
+            /* blink-caret .75s step-end infinite; */
+    }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 275px; }
+      }
+      
+      /* The typewriter cursor effect */
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: transparent }
+    }
+
+    .foot .circles .circle{
+        height: 20px;
+        width: 20px;
+        background-color: rgb(223,223,223);
+        border-radius: 50%;
+        margin: 5px;
+        transform: initial;
+    }
+
+    /* About Section */
+    .about .content .image{
+        display: none;
+    }
+
+    .about .content .text {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .about .content .text .title{
+        font-size: 3rem;
+    }
+
+    .about .content .text .paragraph{
+        font-size: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* border: 2px solid white; */
+        padding-right:0;
+        padding: 15px;
+    }
+
+    /* Education Section */
+    .education .content .image{
+        display: none;
+    }
+    .education .content .text{
+        width: 100%;
+        padding-left: 0px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .education .content .title{
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .education .content .data .school .title2{
+        font-size: 1.4rem;
+        font-weight: bolder;
+        /* color: crimson; */
+    }
+
+    /* Thanks */
+    .thanks .content .title{
+        font-size: 3.5rem;
+        font-weight: bold;
+    }
+
+    .thanks .content .paragraph{
+        font-size: 1.5rem;
+        font-weight: 100;
+        margin-top: 0;
+    }
+    .thanks .content .contacts{
+        margin-top: 30px;
+        width: 70%;
+        height: 10%;
+        /* border: 1px solid white; */
+    }
+}
+
+@media only screen and (max-width: 995px){
+    .nav {
+        margin-top: 60px;
+        height: 10vh;
+        width: 100%;    
+        display: flex;
+        justify-content: space-between;
+        /* border: 2px solid white; */
+    }
+
+    .nav .line{
+        margin-top: 10px;
+        width: 30%;
+        /* border: 2px solid white; */
+    }
+
+    .nav .nav-items{
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .hero .content{
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Poppins', sans-serif;
+        font-size: 4rem;
+        font-weight: bold;
+        overflow-wrap: break-word;
+        /* transform: translateY(-40px); */
+        /* border: 2px solid white; */
+    }
+    .hero .content p{
+        width: 275px;
+        /* overflow: auto; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        /* border: 1px solid yellow; */
+        animation: 
+            typing 2s steps(10),
+            blink-caret .75s step-end infinite;
+    }
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 275px; }
+      }
+      
+      /* The typewriter cursor effect */ 
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #fff }
+    } 
+    
+    .foot .circles .circle{
+        height: 20px;
+        width: 20px;
+        background-color: rgb(223,223,223);
+        border-radius: 50%;
+        margin: 5px;
+        transform: initial;
+    }
+
+    /* About Section */
+    .about .content .image{
+        display: none;
+    }
+
+    .about .content .text {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .about .content .text .title{
+        font-size: 3rem;
+    }
+
+    .about .content .text .paragraph{
+        font-size: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* border: 2px solid white; */
+        padding-right:0;
+        padding: 15px;
+    }
+
+    /* Education */
+    /* Education Section */
+    .education .content .image{
+        display: none;
+    }
+    .education .content .text{
+        width: 100%;
+        padding-left: 0px;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .education .content .title{
+        font-size: 3rem;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .education .content .data .school .title2{
+        font-size: 1.4rem;
+        font-weight: bolder;
+        /* color: crimson; */
+    }
+}
