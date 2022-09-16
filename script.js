@@ -8,10 +8,10 @@ const sleep = (milliseconds) => {
 
 // setTimeout(() => {  console.log("World!"); }, 5000);
 window.onload = function(){
-    // sleep(5000).then(()=>{
+    sleep(1000).then(()=>{
         loader.style.display="none";
         p.style.animation="typing 3s steps(20),blink-caret .75s step-end infinite";
         main.style.overflow="scroll";
-    // })
+    })
     
 };
