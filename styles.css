@@ -9,6 +9,7 @@ body{
     color: white;
     font-family: 'Poppins', sans-serif;
     overscroll-behavior: none;
+    background-color: rgb(36,32,32);
 }
 
 html,body{
